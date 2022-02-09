@@ -87,17 +87,19 @@ class CreateEmployeeComponent extends Component {
                                             <input placeholder="First Name" name="firstName" className="form-control" 
                                                 value={this.state.firstName} onChange={this.changeFirstNameHandler}/>
                                         </div>
+                                        <br></br>
                                         <div className = "form-group">
                                             <label> Last Name: </label>
                                             <input placeholder="Last Name" name="lastName" className="form-control" 
                                                 value={this.state.lastName} onChange={this.changeLastNameHandler}/>
                                         </div>
+                                        <br></br>
                                         <div className = "form-group">
                                             <label> Email Id: </label>
                                             <input placeholder="Email Address" name="emailId" className="form-control" 
                                                 value={this.state.emailId} onChange={this.changeEmailHandler}/>
                                         </div>
-
+                                        <br></br>
                                         <button className="btn btn-success" onClick={this.saveOrUpdateEmployee}>Save</button>
                                         <button className="btn btn-danger" onClick={this.cancel.bind(this)} style={{marginLeft: "10px"}}>Cancel</button>
                                     </form>
