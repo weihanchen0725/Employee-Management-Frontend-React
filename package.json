@@ -2,7 +2,6 @@
   "name": "react-frontend",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://weihanchen0725.github.io/Employee-Management-Frontend-React/",
   "dependencies": {
     "-": "^0.0.1",
     "axios": "^0.19.2",
