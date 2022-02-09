@@ -38,11 +38,11 @@ class CreateEmployeeComponent extends Component {
 
         if(this.state.id === '_add'){
             EmployeeService.createEmployee(employee).then(res =>{
-                this.props.history.push('/employees');
+                this.props.history.push('https://weihanchen0725.github.io/Employee-Management-Frontend-React/employees');
             });
         }else{
             EmployeeService.updateEmployee(employee, this.state.id).then( res => {
-                this.props.history.push('/employees');
+                this.props.history.push('https://weihanchen0725.github.io/Employee-Management-Frontend-React/employees');
             });
         }
     }
