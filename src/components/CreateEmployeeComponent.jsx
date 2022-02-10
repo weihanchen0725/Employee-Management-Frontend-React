@@ -10,7 +10,7 @@ class CreateEmployeeComponent extends Component {
             id: this.props.match.params.id,
             firstName: '',
             lastName: '',
-            emailId: ''
+            emailid: ''
         }
         this.changeFirstNameHandler = this.changeFirstNameHandler.bind(this);
         this.changeLastNameHandler = this.changeLastNameHandler.bind(this);
@@ -26,14 +26,14 @@ class CreateEmployeeComponent extends Component {
                 let employee = res.data;
                 this.setState({firstName: employee.firstName,
                     lastName: employee.lastName,
-                    emailId : employee.emailId
+                    emailid : employee.emailid
                 });
             });
         }        
     }
     saveOrUpdateEmployee = (e) => {
         e.preventDefault();
-        let employee = {firstName: this.state.firstName, lastName: this.state.lastName, emailId: this.state.emailId};
+        let employee = {firstName: this.state.firstName, lastName: this.state.lastName, emailid: this.state.emailid};
         console.log('employee => ' + JSON.stringify(employee));
 
         if(this.state.id === '_add'){
@@ -56,7 +56,7 @@ class CreateEmployeeComponent extends Component {
     }
 
     changeEmailHandler= (event) => {
-        this.setState({emailId: event.target.value});
+        this.setState({emailid: event.target.value});
     }
 
     cancel(){
@@ -96,8 +96,8 @@ class CreateEmployeeComponent extends Component {
                                         <br></br>
                                         <div className = "form-group">
                                             <label> Email Id: </label>
-                                            <input placeholder="Email Address" name="emailId" className="form-control" 
-                                                value={this.state.emailId} onChange={this.changeEmailHandler}/>
+                                            <input placeholder="Email Address" name="emailid" className="form-control" 
+                                                value={this.state.emailid} onChange={this.changeEmailHandler}/>
                                         </div>
                                         <br></br>
                                         <button className="btn btn-success" onClick={this.saveOrUpdateEmployee}>Save</button>
